@@ -1,4 +1,4 @@
-# spring-boot-jpa-docker
+# Spring Boot, Spring MVC, JSP, Spring Security,  JPA, Wildfly 9 and Docker example 
 
 ## Prerequisites:
 * Docker 
