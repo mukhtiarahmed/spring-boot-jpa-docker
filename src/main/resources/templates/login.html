@@ -1,0 +1,64 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+       
+        <meta 	content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+		<meta name="viewport" content="width=device-width" />
+		<title>Company Login</title>
+		<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"  type='text/css' />
+		<link th:href="@{/css/jquery.mn-file.min.css}" rel="stylesheet" type="text/css">
+	<!--     Fonts and icons     -->
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300'	rel='stylesheet' type='text/css'>
+
+
+    </head>
+    <body>
+    <div>
+		<nav class="navbar navbar-ct-red navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">						
+						<a class="navbar-brand" th:href="@{/}">Siroi Assignment</a>
+					</div>				
+				</div>
+		</nav>
+			
+			<div class="content">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 col-sm-6 col-md-offset-4 col-sm-offset-3">
+							 <form action="#" th:action="@{/login}" method="post">
+								<div class="card">
+									<div class="header text-center">Login</div>
+									<div class="content">
+										<div class="form-group">
+											 <label for="username">User Name</label>
+                                			<input type="text"  id="username" name="username" class="form-control" placeholder="Email">
+										</div>
+										<div class="form-group">
+											 <label for="password">Password</label>
+                                <input type="password" name="password" class="form-control" id="password" placeholder="Password">
+										</div>
+										<div class="form-group">
+											
+										</div>
+									</div>
+									<div class="footer text-center">
+										<button class="btn btn-fill btn-danger btn-wd" type="submit">Login</button>
+									</div>
+									<div class="header text-center"></div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>	
+		
+			
+		</div>
+	</div>
+   </body>
+    <script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/jquery.mn-file.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/console.js}"></script>
+</html>

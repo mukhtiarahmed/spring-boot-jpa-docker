@@ -1,0 +1,69 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:fragment="head" >
+     <meta charset="utf-8">
+     <meta http-equiv="x-ua-compatible" content="ie=edge">
+       
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+	<meta name="viewport" content="width=device-width" />
+	<title>Siroi Assignment</title>
+	<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"  type='text/css' />
+   	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300'	rel='stylesheet' type='text/css'>
+	<link th:href="@{/css/jquery.mn-file.min.css}" rel="stylesheet" type="text/css">
+
+
+	<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/pagination.js}"></script>
+    <script type="text/javascript" th:src="@{/js/jquery.mn-file.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/console.js}"></script>
+
+    </head>
+    <body>
+    
+    <div class="wrapper">
+		<div th:fragment="sidebar" class="sidebar" data-color="red" data-image="">
+			<div class="sidebar-wrapper ps">
+				<div class="logo">
+
+					<a class="simple-text"th:href="@{/}">
+						<div class="logo-img"><img th:src="@{/img/angular-red.png}"></div> Siroi Assignment
+					</a>
+				</div>
+				<ul class="nav responsive-nav">
+					<li><a th:href="@{/}"><i class="pe-7s-graph"></i> <span>Dashboard</span></a></li>
+					<li><a th:href="@{/company/}"><i class="pe-7s-note2"></i><span>Company</span></a></li>
+
+				</ul>
+			</div>
+			<div class="sidebar-background"  th:style="'background-image: url('+ @{/img/sidebar-5.jpg} + ')'"></div>
+		</div>
+
+		<div class="main-panel ps ps--active-y">
+
+			<nav  th:fragment="navbar" class="navbar navbar-default">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<button class="navbar-toggle" data-toggle="collapse" type="button">
+							<span class="sr-only">Toggle navigation</span><span
+								class="icon-bar"></span><span class="icon-bar"></span><span
+								class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" th:href="@{/}">Dashboard</a>
+					</div>
+					<div class="collapse navbar-collapse">
+						
+						<ul class="nav navbar-nav navbar-right">							
+							<li><a th:href="@{/logout}"><span>Log out</span></a></li>
+							<li class="separator hidden-lg hidden-md"></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+    		<div class="main-content">
+
+   			</div>
+   		</div>
+   	</div>					 
+    </body> 
+</html>
+

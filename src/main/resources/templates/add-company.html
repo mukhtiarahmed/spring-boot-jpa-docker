@@ -1,0 +1,65 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="template :: head">
+</head>
+<body>
+
+<div class="wrapper">
+	<div th:replace="template :: sidebar"></div>
+
+	<div class="main-panel ps ps--active-y">
+		<div th:replace="template :: navbar"></div>
+
+
+		<div class="main-content">
+			<div class="main-content">
+
+				<div class="card">
+					<div class="header">
+						<h4>Company Master</h4>
+					</div>
+
+					<form action="#" th:action="@{/processExpiredDomain}" th:object="${company}"
+						  enctype="multipart/form-data" method="post">
+						<div class="content row">
+							<div class="col-md-6">
+								<div class="row">
+									<div class="form-group col-md-12">
+										<label for="companyName" class="col-form-label">Company Name</label> <input
+											type="text" th:field="*{companyName}" class="form-control"
+											id="companyName" placeholder="Company Name"> <span
+											th:if="${#fields.hasErrors('companyName')}" th:errors="*{companyName}"
+											class="text-danger"></span>
+									</div>
+								</div>
+								<div class="row">
+									<div class="form-group col-md-12">
+										<label for="companyAbbrName" class="col-form-label">Company Abbr</label> <input
+											type="text" th:field="*{companyAbbrName}" class="form-control"
+											id="companyAbbrName" placeholder="Company Abbr Names"> <span
+											th:if="${#fields.hasErrors('companyAbbrName')}" th:errors="*{companyAbbrName}"
+											class="text-danger"></span>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-md-6">
+										<input type="submit" class="btn btn-fill btn-danger" value="Upload File">
+									</div>
+								</div>
+
+							</div>
+
+
+						</div>
+						<div></div>
+					</form>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+</body>
+
+</html>
+
