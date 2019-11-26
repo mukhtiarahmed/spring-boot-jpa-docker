@@ -11,7 +11,7 @@
 2. Build the project using following maven command from project root folder where pom.xml file place.
   * `mvn clean package`
 3. Create docker image from following command 
-  * `docker build -t assignment_image`
+  * `docker build -t assignment_image .`
 4. Run the docker-compose using the following command   
   * `docker-compose up`
   
